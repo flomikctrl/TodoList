@@ -1,0 +1,232 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* было перенесено на новую строку */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  color: #1a1a1a;
+  min-height: 100vh; /* было перенесено на новую строку */
+}
+
+/* Шапка */
+header {
+  background: #1a1a2e;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem; /* было пустое значение */
+}
+
+.subtitle {
+  color: #a0aec0;
+  font-size: 0.95rem; /* было разбито на две строки */
+}
+
+/* Основной контент */
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Форма добавления */
+.add-form {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.add-form h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.form-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.form-row input,
+.form-row select {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-row input {
+  flex: 1;
+  min-width: 180px;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+  border-color: #667eea;
+}
+
+.form-row button {
+  padding: 0.6rem 1.5rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form-row button:hover {
+  background: #5a6fd6;
+}
+
+.error-message {
+  color: #e53e3e;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  min-height: 1.2rem;
+}
+
+/* Фильтры */
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.filter-btn.active {
+  background: #667eea;
+  border-color: #667eea;
+  color: white;
+}
+
+/* Счётчик */
+.counter {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-bottom: 1rem;
+}
+
+/* Список задач */
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Карточка задачи */
+.task-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: opacity 0.2s;
+}
+
+.task-card.done {
+  opacity: 0.55;
+}
+
+.task-card.done .task-title {
+  text-decoration: line-through;
+  color: #a0aec0;
+}
+
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.task-info {
+  flex: 1;
+}
+
+.task-title {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.task-priority {
+  display: inline-block;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 20px;
+  background: #ebf4ff;
+  color: #3182ce;
+}
+
+.task-priority.высокий {
+  background: #fff5f5;
+  color: #e53e3e;
+}
+
+.task-priority.средний {
+  background: #fffbeb;
+  color: #b7791f;
+}
+
+.task-priority.низкий {
+  background: #f0fff4;
+  color: #276749;
+}
+
+.task-card button {
+  background: none;
+  border: 1px solid #fed7d7;
+  color: #e53e3e;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.task-card button:hover {
+  background: #fff5f5;
+}
+
+/* Пустое состояние */
+.empty-text {
+  text-align: center;
+  color: #a0aec0;
+  padding: 3rem;
+  font-size: 1rem;
+  background: white;
+  border-radius: 12px; /* было незаконченное значение */
+}
